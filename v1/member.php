@@ -283,7 +283,8 @@ $app->add(new \Slim\Middleware\SessionCookie(array(
 		// exit;
 	});
 	$app->post('/mypoints','authenticate', function() use ($app) 
-	{   
+	{ 
+		//point history api	
 		$json=$app->request->getbody();
 		$request_array=json_decode($json,true);
 		$Company_id = $_SESSION["company_id"];
